@@ -1,0 +1,629 @@
+@import url("https://fonts.googleapis.com/css2?family=Vina+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue";
+}
+
+p {
+  font-family: "Titillium Web";
+}
+
+body {
+  background-color: #f6f4eb;
+}
+
+ul {
+  list-style: none;
+}
+
+/* NAVBAR */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  max-width: 98vw;
+  margin: 1rem;
+}
+
+.nav__options {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+  font-family: "Titillium Web";
+  text-transform: capitalize;
+  margin-left: 2rem;
+  font-weight: 600;
+}
+
+.nav__btn-container {
+  margin-right: 2rem;
+}
+
+.nav__btn {
+  font-family: "Titillium Web";
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.4rem;
+  color: white;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: right;
+  font-weight: 600;
+}
+
+.nav__links {
+  color: white;
+}
+
+/* HERO */
+
+.hero__main {
+  min-width: 85vw;
+  max-width: 1440px;
+  margin: 2rem auto;
+}
+
+.hero__main-img {
+  background-image: url("./assets/jezael-melgoza-7H77FWkK_x4-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.8rem;
+  grid-area: a;
+  padding: 0.8rem;
+  position: relative;
+}
+
+.hero__popular {
+  font-family: "Titillium Web";
+  text-transform: capitalize;
+  background-color: yellow;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 125px;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.hero__place {
+  font-family: "Vina sans";
+  display: inline-block;
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 0;
+  margin-left: 1rem;
+  bottom: 0;
+}
+
+.image {
+  border-radius: 0.8rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__image-container {
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "a a f"
+    "a a e"
+    "b c d";
+  row-gap: 1rem;
+  column-gap: 1rem;
+}
+
+.image-1 {
+  grid-area: b;
+  width: 100%;
+}
+
+.image-2 {
+  width: 100%;
+  grid-area: c;
+}
+
+.image-3 {
+  width: 100%;
+  grid-area: d;
+}
+
+.image-4 {
+  width: 100%;
+  grid-area: e;
+  object-fit: center;
+}
+
+.image-5 {
+  width: 100%;
+  grid-area: f;
+}
+
+/* Review */
+
+.hero__reviews-container {
+  background-color: #fff;
+  padding: 1.2rem;
+  margin: 2rem auto;
+  border-radius: 0.8rem;
+  box-shadow: 10px 10px;
+  border: 1px solid black;
+}
+
+.hero__review-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__review {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero__review-star {
+  color: gold;
+  font-size: 1rem;
+}
+
+.hero__review-paragraph {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hero__review-span {
+  color: #d6d6d6;
+  font-weight: 500;
+}
+
+.hero__btn {
+  background-color: #f0e9cd;
+  color: black;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  height: 50px;
+  width: 50px;
+  box-shadow: 2px 2px;
+  border: 1px solid;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.hero__btn:active {
+  box-shadow: 0.7px 0.7px;
+}
+
+.hero__review-city-container {
+  position: relative;
+  margin: 0.5rem auto;
+}
+
+.hero__review-city-date {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  font-family: "Bebas Neue";
+  font-size: 14px;
+}
+
+.hero__review-city-head {
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+  font-size: 4rem;
+}
+
+.hero__review-city-para {
+  font-family: "Titillium Web";
+  font-weight: 400;
+}
+
+/* FEATURES */
+
+.feature__section {
+  min-width: 85vw;
+  max-width: 1440px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+}
+
+.features__list {
+  width: 100%;
+}
+
+.feature__list-item {
+  border-bottom: 1px solid black;
+}
+
+.feature__review {
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+.feature__name-icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.feature__head {
+  font-size: 3rem;
+}
+
+.feature__location {
+  height: 230px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 0.8rem;
+}
+
+.feature__location-head {
+  margin: 1rem 0;
+}
+
+.feature__location-img {
+  border-radius: 0.8rem;
+  height: 100%;
+  width: 300px;
+  object-fit: cover;
+  box-shadow: 10px 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+/* REVIEWS */
+
+.reviews__section {
+  min-width: 85vw;
+  max-width: 1440px;
+  margin: 3rem auto;
+  position: relative;
+}
+
+.reviews__top-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+}
+
+.reviews__main-head {
+  font-size: 6rem;
+}
+
+.reviews__rating {
+  display: flex;
+  align-items: center;
+}
+
+.review__review {
+  font-size: 3.5rem;
+  margin-right: 1rem;
+}
+
+.review__rating-stars {
+  color: #ffc801;
+}
+
+.review__reviews {
+  color: #838181;
+  font-weight: 700;
+}
+
+.review__top-btn-container {
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+}
+
+.review__top-container-btn {
+  background: #0175ff;
+  height: 45px;
+  width: 175px;
+  color: white;
+  font-family: "Titillium Web";
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 0.8rem;
+  box-shadow: 7px 7px rgb(0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.review__top-container-btn:active {
+  box-shadow: 4px 4px rgb(0, 0, 0);
+}
+
+.reviews__bottom-container {
+  width: 100%;
+}
+
+.review__list-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin: 2rem auto;
+  border-bottom: 1px solid black;
+  padding-bottom: 2rem;
+}
+
+.review__name-location {
+  margin-top: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.review__bottom-stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.review__para {
+  width: 99%;
+}
+
+.review__date {
+  text-align: right;
+}
+
+.review__head {
+  letter-spacing: 3px;
+  margin-left: 1rem;
+}
+
+.review__description {
+  font-weight: 600;
+}
+
+.review__next-prev-btn-wrapper {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  right: 0;
+}
+
+.prev-next-btn {
+  background-color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #ffc801;
+}
+
+.prev-next-btn:active {
+  box-shadow: 2px 2px;
+}
+
+/* ACTIVITIES */
+
+.activities__section {
+  min-width: 85vw;
+  max-width: 1440px;
+  margin: 3rem auto;
+  margin-top: 15rem;
+}
+
+.activities__heading {
+  font-size: 6rem;
+}
+
+.activity__img-container {
+  position: relative;
+}
+
+.activity__popular {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font-family: "Titillium Web";
+  text-transform: capitalize;
+  background-color: yellow;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  width: 105px;
+  text-align: center;
+  margin-right: 1rem;
+  font-weight: 600;
+}
+
+.activity__name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-family: "Vina sans";
+  font-size: 1.6rem;
+}
+
+.activities__card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  margin: 2rem auto;
+}
+
+.activity__card {
+  border: 2px solid black;
+  box-shadow: 10px 10px;
+  border-radius: 0.8rem;
+  /* height: 0px; */
+}
+
+.star {
+  color: #ffc801;
+}
+
+.activity__rating-date {
+  font-weight: 600;
+}
+
+.activity__img {
+  height: 240px;
+  border-radius: 0.8rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.activity__details {
+  padding: 0.3rem;
+}
+
+.activity__rating-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activity__heading,
+.activity__price,
+.activity__location,
+.activity__phone {
+  padding: 0.3rem;
+  margin: 0.5rem 0.3rem;
+  font-weight: 600;
+}
+
+/* OFFERS */
+
+.offers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  background-color: #ff694b;
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+.offers__head {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.offers__btn {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  height: fit-content;
+}
+
+/* FOOTER */
+
+.footer__section {
+  background: black;
+  color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+.footer__contact-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  column-gap: 4rem;
+}
+
+.footer__head {
+  font-size: 4rem;
+}
+
+.footer__para-container {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.footer__para {
+  line-height: 3rem;
+}
+
+.footer__rights {
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem auto;
+  color: #838181;
+}
+
+.footer__rights-para {
+  font-size: 12px;
+  font-weight: 700;
+  justify-self: start;
+}
+
+.footer__anchor {
+  align-self: end;
+  justify-self: end;
+  color: #838181;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+.footer__bg {
+  color: #83818150;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  font-size: 5rem;
+  text-align: center;
+  letter-spacing: 2rem;
+}
